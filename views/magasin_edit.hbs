@@ -1,0 +1,20 @@
+<h2>Add Store</h2>
+<form action ="#" class="card" method="POST" enctype="multipart/form-data">
+    <label for="name">
+        Name:
+        <input type="text" name="name" id="name" value={{magasin.name}}>
+    </label>
+    <label for="slug">
+        Slug:
+        <input type="text" name="slug" id="slug" value={{magasin.slug}}>
+    </label>
+    <label for="photo">
+        Img: 
+        <input type="file" name="photo" id="photo" value={{magasin.photo}}>
+    </label>
+    <label for="desc">
+        Desc:
+        <textarea name="desc" id="desc" cols="30" rows="10">{{magasin.desc}}</textarea>
+    </label>
+    <input type="submit" value="Valider">
+</form>

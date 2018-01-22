@@ -1,2 +1,14 @@
-    <h1>{{title}}</h1>
-    <p>{{test}}</p>
+
+<h1>Magasins</h1>
+<div class="stores">
+    {{#each magasins as |magasin|}}
+    <div class="store store__hero">
+        <a href="/magasins/{{magasin.slug}}">
+            <h2 class="title">{{magasin.name}}</h2>
+            <img src="uploads/{{magasin.photo}}" alt="">
+            <p>{{magasin.photo}}</p>
+            <p>{{magasin.desc}}</p>
+        </a>
+    </div>
+    {{/each}}
+</div>
