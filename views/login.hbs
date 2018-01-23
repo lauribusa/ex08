@@ -1,0 +1,16 @@
+<h2>Login</h2>
+<form action ="/register" class="card" method="POST">
+    <label for="name">
+        Name:
+        <input type="text" name="name" id="name" value={{user.name}}>
+    </label>
+    <label for="email">
+        Email:
+        <input type="email" name="email" id="email" value={{user.email}}>
+    </label>
+    <label for="pswd">
+        Password: 
+        <input type="text" name="pswd" id="pswd" value={{user.pswd}}>
+    </label><br>
+    <input type="submit" value="Valider">
+</form>

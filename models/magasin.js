@@ -13,6 +13,22 @@ const schema = new mongoose.Schema({
     },
     photo:{
         type:String
+    },
+    location: {
+        type: {
+            type: String,
+            default: 'Point'
+        },
+        coordinates: [
+            {
+                type: Number,
+                required: "Please enter some coordinates you fuckboy."
+            }
+        ],
+        adress: {
+            type: String,
+            required: "You must enter an address you twat."
+        }
     }
 });
 

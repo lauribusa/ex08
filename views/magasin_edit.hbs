@@ -15,6 +15,18 @@
     <label for="desc">
         Desc:
         <textarea name="desc" id="desc" cols="30" rows="10">{{magasin.desc}}</textarea>
+    </label><br>
+    <label for="location[adress]">
+        Address:
+        <input type="text" name=location[adress] id="lng" value="{{magasin.location.adress}}">
+    </label>
+    <label for="location[coordinates][0]">
+        Latitude:
+        <input type="text" name="location[coordinates][0]" id="lng" value="{{magasin.location.coordinates.[0]}}">
+    </label>
+    <label for="location[coordinates][1]">
+        Longitude:
+        <input type="text" name="location[coordinates][1]" id="lat" value="{{magasin.location.coordinates.[1]}}">
     </label>
     <input type="submit" value="Valider">
 </form>

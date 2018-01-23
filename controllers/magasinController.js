@@ -9,8 +9,8 @@ exports.addMagasin=(req,res)=>{
 }
 
 exports.createMagasin=async (req,res)=>{
-    console.log(req.body)
     const magg= await new magasin(req.body).save()
+    console.log(req.body)
     res.redirect('/');
 }
 
