@@ -14,6 +14,12 @@ exports.createMagasin=async (req,res)=>{
     res.redirect('/');
 }
 
+exports.editMagasin= async(req,res)=>{
+    const mog = await magasin.findOne({_id: req.params.id})
+    if (!mog) return next();
+    res.render('magasin_edit', {"magasin": mog}); 
+}
+
 exports.getMagasinBySlug = async (req,res) =>{
     const mags = await magasin.findOne({slug: req.params.slug})
     res.render('magasin_details',{magasin:mags})
@@ -45,4 +51,9 @@ exports.resize = async (req,res,next) => {
         await photo.write(`${process.cwd()}/public/uploads/${req.body.photo}`)
         next();
     }
+}
+
+exports.updateMagasin = async(req,res) =>{
+    const mag = await magasin.findByIdAndUpdate({_id: req.params.id},req.body,{new:true}).exec()
+    res.redirect(`/magasins/${req.body.slug}`);
 }

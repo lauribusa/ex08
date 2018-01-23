@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const schema = new mongoose.Schema({
     name:{
         type:String,
-        required:"Thanks for introducing a name"
+        required:'Thanks for introducing a name'
     },
     slug:{
         type:String,
@@ -14,6 +14,6 @@ const schema = new mongoose.Schema({
     photo:{
         type:String
     }
-})
+});
 
 module.exports = mongoose.model('magasin', schema);
