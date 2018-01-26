@@ -14,8 +14,8 @@ mongoose.connect(process.env.DB_HOST,(err)=>{
     console.log('Mongo is now connected and ready for requests.')
 })
 //Start our app if everything is okay and initialized.
-require(`${process.cwd()}/models/magasin`)
-
+require(`${process.cwd()}/models/magasin`);
+require(`${process.cwd()}/models/User`);
 
 const app = require(`${process.cwd()}/app`);
 

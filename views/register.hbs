@@ -1,5 +1,8 @@
+{{#each errors as |error|}}
+Error : {{error.msg}}<br>
+{{/each}}
 <h2>New User</h2>
-<form action ="/register" class="card" method="POST">
+<form action ="/register" class="form" method="POST">
     <label for="name">
         Name:
         <input type="text" name="name" id="name" value={{user.name}}>
@@ -14,7 +17,7 @@
     </label>
     <label for="pswd-confirm">
         Confirm Password: 
-        <input type="password" name="pswd" id="pswd" value={{user.pswd-confirm}}>
+        <input type="password" name="pswd-confirm" id="pswd-confirm" value={{user.pswd-confirm}}>
     </label><br>
     <input type="submit" value="Valider" class="button">
 </form>

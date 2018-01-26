@@ -12,9 +12,10 @@ const schema = new mongoose.Schema({
         trim:true,
         lowercase:true,
         unique:true,
-        validate: [validator.isEmail, "EMail invalide"],
+        validate: [validator.isEmail, "Email invalide"],
         required:'Please enter an email'
     }
 });
 // JAMAIS AVEC 'S'
+schema.plugin(passportLocalMongoose, {usernameField: "email"});
 module.exports = mongoose.model('User', schema);

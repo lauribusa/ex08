@@ -3,7 +3,7 @@ const magasin = mongoose.model('magasin');
 
 exports.home = async (req,res)=>{
     const magasins = await magasin.find();
-    console.log(magasins);
+    // console.log(magasins);
     
     res.render('index', {title: "My home page", magasins: magasins});
 }
